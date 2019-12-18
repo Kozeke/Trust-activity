@@ -1,0 +1,7 @@
+.add-module-tab {
+	display: none;
+}
+
+.add-module-tab.active {
+	display: block;
+}

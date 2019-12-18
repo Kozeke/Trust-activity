@@ -1,0 +1,53 @@
+.header_menu {
+	padding: 0;
+}
+
+.header_profile ul {
+	text-align: right;
+}
+
+.video_mac {
+  width: 615px;
+  height: 515px;
+  /*background-image: url(../img/mac_bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;*/
+  position: relative;
+}
+.video_mac img {
+    display: block;
+    width: 100%;
+}
+.video_img {
+  position: absolute;
+  left: 0;
+  top: 27px;
+  right: 0;
+  margin: auto;
+  width: 569px;
+  overflow: hidden;
+}
+.video_img img {
+  display: block;
+  width: 100%;
+}
+
+.play_btn {
+  position: absolute;
+  left: 0;
+  top: 110px;
+  right: 0;
+  margin: auto;
+  width: 163px;
+  height: 155px;
+}
+.play_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*background-image: url(../img/video_btn.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;*/
+}

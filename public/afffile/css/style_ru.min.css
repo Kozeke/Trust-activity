@@ -1,0 +1,124 @@
+.header_menu {
+  padding: 0 34px; }
+
+.header_profile {
+  padding-left: 54px; }
+
+.header_title h1 {
+  font-size: 39px; }
+
+.header_form form p {
+  right: 47px; }
+
+.notification_item3, .notification_item4 {
+  padding-right: 19px; }
+
+.tabs_button .btn {
+  width: 240px; }
+
+.copy_block p:first-of-type {
+  margin-bottom: 5px; }
+
+.copy_block p:nth-of-type(2) {
+  margin-bottom: 0; }
+
+.three_step_notification1 {
+  background-image: url(../img/step3_1_ru.svg); }
+
+.three_step_notification2 {
+  background-image: url(../img/step3_2_ru.svg); }
+
+.three_step_notification3 {
+  background-image: url(../img/step3_3_ru.svg); }
+
+.three_step_notification4 {
+  background-image: url(../img/step3_4_ru.svg); }
+
+.header_title h1 .x_br {
+  display: none; }
+
+@media screen and (max-width: 1199px) {
+  .menu_burger {
+    margin-left: 35px; }
+  .header_profile {
+    padding-left: 0; }
+  .header_title h1 {
+    font-size: 36px; }
+  .header_title h1 .md_br, .header_title h1 .lg_br {
+    display: none; }
+  .header_form form p {
+    right: 25px; }
+  .main_list li span:last-of-type {
+    width: 85%; }
+  .advantages_item {
+    min-height: 225px; }
+  .free_trial_form.header_form form p {
+    right: 43px; }
+  .notification_item {
+    padding-right: 13px; }
+  .notification_desc {
+    width: 77%; }
+  .notification_desc_time {
+    width: 38%; }
+  .notification_item3 .notification_desc_by, .notification_item4 .notification_desc_by {
+    width: 62%; } }
+
+@media screen and (max-width: 991px) {
+  .menu_burger {
+    margin-left: 41px; }
+  .header_title h1 {
+    font-size: 30px; }
+  .header_form form p {
+    right: 28px; }
+  .main_list li span:last-of-type {
+    width: 80%; }
+  .free_trial_form.header_form form p {
+    right: 47px; }
+  .pay_block_item {
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 767px) {
+  .menu_burger {
+    margin-left: 18px; }
+  .menu_mobile {
+    right: -164px; }
+  .c-menu_mobile::before {
+    right: -170px; }
+  .header_title h1 {
+    font-size: 25px; }
+  .header_title h1 .x_br {
+    display: inline; }
+  .header_text {
+    padding-right: 15px; }
+  .header_form form p {
+    right: 30px; }
+  .free_trial_form.header_form form p {
+    right: 29px; }
+  .copy_block p:nth-of-type(2), .copy_block p:last-of-type, .with_love {
+    display: block; }
+  .tabs_button .btn {
+    width: 230px; } }
+
+@media screen and (max-width: 575px) {
+  .menu_burger {
+    margin-left: auto; }
+  .menu_mobile {
+    right: 0; }
+  .header_title h1 {
+    font-size: 21px; }
+  .header_title h1 .x_br {
+    display: none; }
+  .header_text {
+    padding-right: 0; }
+  .header_form form p {
+    right: 0; }
+  .advantages_item {
+    min-height: 200px; }
+  .free_trial_title h3 {
+    font-size: 22px; }
+  .free_trial_desc br {
+    display: none; }
+  .free_trial_form.header_form form p {
+    right: 0; }
+  .tabs_button .btn {
+    width: 230px; } }

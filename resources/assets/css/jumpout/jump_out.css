@@ -1,0 +1,221 @@
+metric-box-mini.module_step_list {
+    text-align: center;
+}
+
+.jump_out_block {
+    width: 100%;
+    height: 425px;
+    -background-color: #F6F9FD;
+    border: 1px solid #EDF1F6;
+    -border-radius: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .3s;
+}
+
+.jump_out_block.error {
+    background-color: rgba(216, 132, 125, 0.4);
+}
+
+.jump_out_preview {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    position: relative;
+    text-align: center;
+    padding: 16px 0;
+}
+.jump_out_preview p {
+    color: #A5A5A5;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.jump_out_create_link {
+    display: block;
+    width: 180px;
+    height: 35px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #FF4176;
+    margin: auto;
+    transition: all 0.2s ease-in-out;
+}
+.jump_out_create_link:hover, .jump_out_create_link:active {
+    color: #fff;
+    background-color: #EE3368;
+}
+
+
+.jump_out_preview_title {
+    color: #4D4D4D;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.jump_out_preview_text {
+    color: #4D4D4D;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 15px;
+}
+.jump_out_preview_button {
+    margin-bottom: 15px;
+}
+.jump_out_preview_button button {
+    width: 127px;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background-color: #BAC4D6;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+.jump_out_preview_img img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+.jump_out_preview_img {
+    padding: 0 14px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+.jump_out_preview--block {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center center;
+    border-style: solid;
+    border-width: 0;
+}
+.jump_out_preview--block.jump_out_title {
+    font-size: 28px;
+    line-height: 34px;
+}
+
+#metric-box {
+    -width: 300px;
+    -height: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    position: relative;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+#metric-box-mini {
+    -width: 150px;
+    -height: 150px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -margin: 30px auto;
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
+    display: inline-block;
+}
+
+#metric-box-mini.small,
+#metric-box.small {
+    width: 360px;
+    height: 360px;
+}
+
+#metric-box-mini.medium,
+#metric-box.medium {
+    width: 500px;
+    height: 500px;
+}
+
+#metric-box-mini.large,
+#metric-box.large {
+    width: 650px;
+    height: 650px;
+}
+
+#metric-box-mini.f_h {
+    width: 300px;
+    height: 300px;
+}
+
+#metric-box.f_h {
+    width: 300px;
+    height: 100%;
+}
+
+#metric-box-mini.f_w {
+    width: 300px;
+    height: 300px;
+}
+
+#metric-box.f_w {
+    width: 100%;
+    height: 300px;
+}
+
+div#metric-box.f_h.right-mid {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+}
+
+div#metric-box.f_h.left-mid {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+}
+
+div#metric-box.f_w.center-top {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0;
+}
+
+.metrics_block_ex.metric_jumpout_preview {
+    height: 400px;
+} 
+
+.metrics_block_ex.metric_jumpout_preview > .metrics_block_ex_content {
+    height: 100%;
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}

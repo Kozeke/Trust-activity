@@ -1,0 +1,829 @@
+
+@font-face {
+    font-family: Lato, sans-serif;
+    src: url(http://www.trustactivity.com/fonts/Lato-Regular.ttf) format("truetype");
+    src: url(http://www.trustactivity.com/fonts/Lato-Regular.eot?) format("eot");
+    src: url(http://www.trustactivity.com/fonts/Lato-Regular.woff) format("woff");
+    font-weight: 400;
+} 
+
+.truster-close-button { 
+	animation: none!important;
+	background-color: rgba(226, 243, 254, 1)!important;
+	background-image:url(https://www.trustactivity.com/cdn/img/cross.svg)!important;
+	background-size: 40%!important;
+	background-repeat: no-repeat!important;
+	background-position: center center!important;
+	border-radius: 50%!important;
+	border: none!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: pointer!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	font-size: 12px!important;
+	font-family: Lato, sans-serif!important;
+	font-weight: 400!important;
+	font-style: normal!important;
+	font-stretch: normal!important;
+	font-variant: normal!important;
+	height: 18px!important;
+	left: auto!important;
+	line-height: 20px!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: absolute!important;
+	bottom: auto!important;
+	top: 8px!important;
+	right: 20px!important;
+	text-align: center!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	transform: none!important;
+	transition: ease-in-out .2s!important;
+	width: 18px!important;
+	z-index: 999!important;
+}
+.truster-close-button:hover { 
+	background-color: rgba(226, 243, 254, 0.5)!important;
+	animation: none!important;
+	background-image:url(https://www.trustactivity.com/cdn/img/cross.svg)!important;
+	background-size: 40%!important;
+	background-repeat: no-repeat!important;
+	background-position: center center!important;
+	border-radius: 50%!important;
+	border: none!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: pointer!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	font-size: 12px!important;
+	font-family: Lato, sans-serif!important;
+	font-weight: 400!important;
+	font-style: normal!important;
+	font-stretch: normal!important;
+	font-variant: normal!important;
+	height: 18px!important;
+	left: auto!important;
+	line-height: 20px!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: absolute!important;
+	bottom: auto!important;
+	top: 8px!important;
+	right: 20px!important;
+	text-align: center!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	transform: none!important;
+	transition: ease-in-out .2s!important;
+	width: 18px!important;
+	z-index: 999!important;
+ }	
+
+.truster-popup .truster-popup-name {
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	font-family: Lato, sans-serif!important;
+	font-size: 14px!important;
+	white-space: nowrap!important;
+	font-weight: 400!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	margin: 0!important;
+	padding: 0!important;
+	color: #484848!important;
+	letter-spacing: normal!important;
+	opacity: 1!important;
+	outline: none!important;
+	line-height: 20px!important;
+	overflow: hidden!important;
+	height: 20px!important;
+	width: 190px!important;
+	perspective: none!important;
+	position: relative!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+}
+ 
+.truster-popup.overall .truster-popup-name { 
+	height: 37px!important;
+	width: 190px!important;
+	line-height: 18.5px!important;
+	white-space: normal!important;
+}
+ 
+.truster-popup .truster-popup-message { 
+    font-family: Lato, sans-serif!important;
+    margin: 0!important;
+    padding: 0!important;
+    color: #939393!important;
+    font-size: 12px!important;
+    line-height: 17px!important;
+	white-space: nowrap!important;
+    overflow: hidden!important;
+    position: relative!important;
+    height: 17px!important;
+    width: 190px!important;
+    animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	font-weight: 400!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	letter-spacing: normal!important;
+	opacity: 1!important;
+	outline: none!important;
+	perspective: none!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+}
+
+.truster-popup-visitors { 
+	color: #2d5eff!important;
+	background-color: #eff8fe!important;
+	background-image: none!important;
+	letter-spacing: 0!important;
+	font-family: Lato, sans-serif!important;
+	line-height: 20px!important;
+
+
+	margin: 0!important;
+	padding: 0!important;
+	font-size: 14px!important;
+	font-weight: 400!important;
+
+	cursor: pointer!important;
+
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	text-align: right!important;
+	width: auto;!important;
+	display: inline!important;
+	white-space: nowrap!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+}
+
+.truster-popup.overall .truster-popup-message { 
+	height: 0!important;
+}
+
+#truster-popup {
+	animation: none!important;
+	background: white!important;
+	border: none!important;
+	border-radius: 35px!important;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,.2)!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	height: 70px!important;
+	margin: 0!important;
+	max-width: 320px!important;
+	min-width: 320px!important;
+	min-height: 70px!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 7px 40px 7px 8px!important;
+	perspective: none!important;
+	position: fixed!important;
+	transform: none!important;
+	transition: ease-in-out .1s!important;
+	visibility: visible!important;
+	width:320px!important;
+	z-index: 9999999!important;
+	opacity: 0;
+}
+
+#truster-popup:hover { 
+	box-shadow: 0 0 0 5px rgba(212, 236, 252, 0.5)!important;
+	animation: none!important;
+	background: white!important;
+	border: none!important;
+	border-radius: 35px!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	height: 70px!important;
+	margin: 0!important;
+	max-width: 320px!important;
+	min-width: 320px!important;
+	min-height: 70px!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 7px 40px 7px 8px!important;
+	perspective: none!important;
+	position: fixed!important;
+	transform: none!important;
+	transition: ease-in-out .1s!important;
+	visibility: visible!important;
+	width:320px!important;
+	z-index: 9999999!important;
+}
+
+	
+ 
+.truster-tag {
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	font-family: Lato, sans-serif!important;
+	text-align: right!important;
+	width: 50%!important;
+	display: inline-block!important;
+	vertical-align: top!important;
+}
+
+.truster-popup.overall .truster-tag {
+	text-align: left!important;
+}
+
+.truster-tag-link {
+	font-family: Lato, sans-serif!important;
+	margin: 0!important;
+	padding: 0!important;
+	font-size: 10px!important;
+	line-height: 12px!important;
+	color: #939393!important;
+	font-weight: 500!important;
+	cursor: pointer!important;
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	text-align: right!important;
+	width: 100%!important;
+	display: block!important;
+	white-space: nowrap!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	letter-spacing: normal!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+} 
+
+.truster-tag-icon {
+	animation: none!important;
+	background-color: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	flex: auto!important;
+	float: none!important;
+	line-height: initial!important;
+	font-family: Lato, sans-serif!important;
+	width: 11px!important;
+	height: 8px!important;
+	background-image: url(https://www.trustactivity.com/img/done_green.svg)!important;
+	margin-right: 3px!important; 
+	display: inline-block!important;
+	vertical-align: top!important;
+	margin-top: 3px!important;
+	background-position: center!important;
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    margin-left: 0!important;
+    margin-bottom: 0!important;
+    opacity: 1!important;
+    outline: none!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    perspective: none!important;
+    position: relative!important;
+    transform: none!important;
+    transition: none!important;
+    visibility: visible!important;
+}
+
+.truster-tag-text {
+	line-height: initial!important;
+	font-family: Lato, sans-serif!important;
+	display: inline-block!important;
+	vertical-align: top!important;
+
+	margin: 0!important;
+	padding: 0!important;
+	font-size: 10px!important;
+	color: #939393!important;
+	font-weight: 500!important;
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	width: auto!important;
+	white-space: nowrap!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	letter-spacing: normal!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+}
+
+.truster-tag-text-title {
+	line-height: initial!important;
+	font-family: Lato, sans-serif!important;
+	color: #32BA7C!important;
+	font-weight: 700!important;
+	display: inline-block!important;
+	vertical-align: top!important;
+
+	margin: 0!important;
+	padding: 0!important;
+	font-size: 10px!important;
+
+
+
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	text-align: right!important;
+	width: auto!important;
+	white-space: nowrap!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	letter-spacing: normal!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+}
+
+.truster-popup-created {
+	font-family: Lato, sans-serif!important;
+	text-align: left!important;
+	width: 50%!important;
+	display: inline-block!important;
+	vertical-align: top!important;
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+}
+
+.truster-popup-created > p {
+	font-family: Lato, sans-serif!important;
+	margin: 0!important;
+	padding: 0!important;
+	color: #939393!important;
+	font-size: 11px!important;
+	line-height: 16px!important;
+	white-space: normal!important;
+    overflow: visible!important;
+    position: relative!important;
+    height: auto!important;
+    width: auto!important;
+    animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	font-weight: 400!important;
+	font-stretch: normal!important;
+	font-style: normal!important;
+	font-variant: normal!important;
+	letter-spacing: normal!important;
+	opacity: 1!important;
+	outline: none!important;
+	perspective: none!important;
+	text-decoration: none!important;
+	text-shadow: none!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	text-transform: none!important;
+	transform: none!important;
+	transition: none!important;
+	visibility: visible!important;
+	word-break: normal!important;
+	word-spacing: normal!important;
+	word-wrap: normal!important;
+	writing-mode: horizontal-tb!important;
+	text-overflow: clip!important;
+}
+
+.truster-popup-image {
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 50%!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	display: inline-block!important;
+	flex: auto!important;
+	float: none!important;
+	height: 56px!important;
+	margin-left: 0!important;
+	margin-bottom: 0!important;
+	margin-top: 0!important;
+	margin-right: 13px!important;
+	min-width: 56px!important;
+	min-height: 56px!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+	vertical-align: top!important;
+	width: 56px!important;
+}
+.truster-popup-image > img {
+	display: block!important;
+	width: 100%!important;
+    height: 100%!important;
+    animation: none!important;
+    border: none!important;
+    border-radius: 0!important;
+    box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: static!important;
+	transform: none!important;
+	transition: none!important;
+	border-radius: 50%!important;
+}
+
+.truster-popup-container {
+	line-height: initial!important;
+	width: 56px!important;
+	height: 56px!important;
+	position: relative!important;
+	border-radius: 50%!important;
+	margin-right: 13px!important;
+	display: inline-block!important;
+	vertical-align: top!important;
+	overflow: hidden!important;
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	margin-left: 0!important;
+	margin-bottom: 0!important;
+	margin-top: 0!important;
+	min-width: 56px!important;
+	min-height: 56px!important;
+	opacity: 1!important;
+	outline: none!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: relative!important;
+	transform: none!important;
+	transition: none!important;
+}
+.truster-popup-container > img {
+	display: block!important;
+	width: 100%!important;
+    height: 100%!important;
+    animation: none!important;
+    border: none!important;
+    border-radius: 0!important;
+    box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	flex: auto!important;
+	float: none!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: static!important;
+	transform: none!important;
+	transition: none!important;
+}
+
+#trust-container {
+	animation: none!important;
+	background: rgba(255,255,255,0)!important;
+	border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	height: auto!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: visible!important;
+	padding: 0!important;
+	perspective: none!important;
+	position: static!important;
+	transform: none!important;
+	visibility: visible!important;
+	width: auto!important;
+
+}
+
+
+.truster-popup .truster-popup-name::after {
+    content: ''!important;
+    position: absolute!important;
+    right: 0!important;
+    top: 0!important;
+    bottom: 0!important;
+    left: auto!important;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1))!important;
+    height: 100%!important;
+    width: 30px!important;
+    animation: none!important;
+    border: none!important;
+	border-radius: 0!important;
+	box-shadow: none!important;
+	box-sizing: border-box!important;
+	cursor: default!important;
+	display: block!important;
+	flex: auto!important;
+	float: none!important;
+	margin: 0!important;
+	opacity: 1!important;
+	outline: none!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	perspective: none!important;
+	transform: none!important;
+	visibility: visible!important;
+}
+
+.truster-popup.overall .truster-popup-name::after {
+	display: none!important;
+}
+
+div#truster-jumpout-blackout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #000000ab;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+div#truster-jumpout-blackout.active {
+	opacity: 1;
+}
+
+div#truster-jumpout-popup {
+    background-color: white;
+    width: 360px;
+    height: 360px;	
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+}
+
+div#truster-jumpout-popup.small {
+    width: 360px;
+    height: 360px;	
+}
+
+div#truster-jumpout-popup .truster-jumpout-item {
+    position: relative;
+    display: block;
+    padding: 12px 20px;
+    background-color: transparent;
+    -border: 1px solid rgba(255,255,255, 0);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+div#truster-jumpout-popup .jump_out_title {
+	margin-bottom: 20px;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+div#truster-jumpout-popup .jump_out_text {
+	margin-bottom: 20px;
+	font-size: 14px;
+    line-height: 24px;
+}
+
+div#truster-jumpout-popup .jump_out_button {
+	font-size: 14px;
+    width: 100%;
+    line-height: 15px;
+}
+
+#truster-jumpout-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+    background-color: transparent;
+    background-image: url(/img/cancel_h.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 50%;
+    display: block;
+    transition: all .3s;
+    border-radius: 100%;
+}
+
+#truster-jumpout-close:hover {
+    background-color: rgba(255, 255, 255, 0.30);
+}
+

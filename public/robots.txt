@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /auth/reset
+Disallow: /auth/login
+Disallow: /auth/register
+
+
+ 

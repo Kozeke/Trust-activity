@@ -1,0 +1,112 @@
+@media screen and (max-height: 951px) {
+  .sidebar_footer.visible-h {
+    display: none; }
+  .sidebar_footer.hidden-h {
+    display: block; }
+  .sidebar {
+    overflow-y: auto; }
+  .dashboard_check_list {
+    max-height: 435px; }
+  .dashboard_fixed_tabs_caption.hidden-h {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 20px; }
+  .dashboard_fixed_tabs_caption.visible-h {
+    display: none; }
+  .dashboard_fixed_right {
+    overflow-y: auto; }
+  .dashboard_fixed_tabs {
+    padding-top: 60px; } }
+
+
+@media screen and (max-width: 1439px) {
+  .c-payment_block, .c-referrals_block, .c-metrics_block, .c-contacts_block {
+    display: none;
+    right: 0;
+  }
+  .payment_history_block.show_referrals .c-payment_block, 
+  .referrals_information_block.show_referrals .c-referrals_block, 
+  .metrics_block.show_metrics .c-metrics_block, 
+  .contacts_block.show_contacts .c-contacts_block {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  main {
+    display: block;
+  }
+  .header {
+    position: relative;
+  }
+  .sign_content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .sign_form_row {
+    margin-bottom: 30px;
+  }
+  .sing_error_text {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -41px;
+    width: 100%;
+    text-align: center;
+  }
+  .sign_form_row.sing_agree {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .header {
+    font-size: 0;
+    height: 40px;
+  }
+  .header_sign_logo {
+    position: relative;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    padding: 0 20px;
+  }
+  .header_sign_logo a {
+    width: 120px;
+    height: 40px;
+  }
+  .header_sign_link {
+    position: relative;
+    right: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    padding: 0 20px;
+  }
+  .header_sign_link a {
+    margin-left: auto;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+  }
+  .sign_content {
+    width: 100%;
+    max-width: 360px;
+  }
+  .social_btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .face_btn {
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+}
+
+
+

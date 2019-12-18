@@ -1,0 +1,243 @@
+.partners_page .logo_header_img a {
+  background-image: url("../img/logo_partners.svg");
+  width: 325px; }
+
+.partners_page .header_profile ul {
+  text-align: right; }
+
+.partners_page .header_title {
+  margin-bottom: 30px; }
+
+.partners_page .header_text {
+  margin-bottom: 45px; }
+
+.partners_page .header_form form button {
+  width: 135px; }
+
+.partners_page .header_form form input {
+  width: 461px; }
+
+header.partners_page {
+  padding-bottom: 118px; }
+
+.partners_page .header_desc_box {
+  margin-top: 100px; }
+
+.partners_page .main_list li:not(:last-child) {
+  margin-bottom: 35px; }
+
+.partners_page .main_list li {
+  position: relative;
+  padding-left: 50px; }
+  .partners_page .main_list li p:first-of-type {
+    color: #5C68C9;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-bottom: 8px; }
+  .partners_page .main_list li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(50, 186, 124, 0.2), rgba(150, 249, 215, 0.2));
+    background: -webkit-linear-gradient(to bottom, rgba(50, 186, 124, 0.2), rgba(150, 249, 215, 0.2)); }
+  .partners_page .main_list li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url(../img/done.svg); }
+
+.partners_page .types_site_block .main_title, .partners_page .types_site_block .main_desc {
+  text-align: left; }
+
+.partners_page .main_desc {
+  position: relative;
+  padding-left: 50px; }
+  .partners_page .main_desc a {
+    color: #3B75FF; }
+  .partners_page .main_desc p:not(:last-child) {
+    margin-bottom: 20px; }
+  .partners_page .main_desc::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(50, 145, 186, 0.2), rgba(150, 219, 249, 0.2));
+    background: -webkit-linear-gradient(to bottom, rgba(50, 145, 186, 0.2), rgba(150, 219, 249, 0.2)); }
+  .partners_page .main_desc::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url(../img/done_blue.svg); }
+
+.partners_page .types_site_block {
+  padding: 250px 0 160px 0; }
+
+.center_bubble {
+  width: 327px;
+  height: 327px;
+  margin: auto;
+  box-shadow: 0 0 40px rgba(26, 86, 179, 0.2);
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  background: -webkit-linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  margin-top: -85px;
+  position: relative; }
+
+.bubble_heart {
+  position: absolute;
+  top: -130px;
+  right: 45px;
+  background: linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  background: -webkit-linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(26, 86, 179, 0.2); }
+  .bubble_heart::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 29px;
+    height: 24px;
+    background-image: url("../img/bubble_heart.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
+.bubble_smile {
+  position: absolute;
+  top: -18px;
+  right: -30px;
+  background: linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  background: -webkit-linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(26, 86, 179, 0.2); }
+  .bubble_smile::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 55px;
+    height: 55px;
+    background-image: url("../img/bubble_smile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
+.bubble_fire {
+  position: absolute;
+  bottom: -50px;
+  left: -15px;
+  background: linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  background: -webkit-linear-gradient(to bottom, #9AD4FF, #4D98F3);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(26, 86, 179, 0.2); }
+  .bubble_fire::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30px;
+    height: 38px;
+    background-image: url("../img/bubble_fire.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
+.bubble_text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #ffff;
+  font-size: 16px;
+  line-height: 23px; }
+  .bubble_text p {
+    color: #ffffff; }
+  .bubble_text span {
+    font-size: 50px;
+    line-height: 72px;
+    font-weight: 700;
+    color: #ffffff; }
+
+.main_bubble {
+  position: relative;
+  min-height: 468px; }
+
+.main_bubble_img {
+  width: 535px;
+  position: absolute;
+  top: 0;
+  right: -75px; }
+  .main_bubble_img img {
+    display: block;
+    width: 100%; }
+
+.main_bubble_text {
+  position: absolute;
+  bottom: 50px;
+  left: -70px;
+  right: 100%;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 24px;
+  min-width: 170px; }
+  .main_bubble_text p:last-of-type {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 5px; }
+
+.partners_page .how_block {
+  padding-top: 50px; }
+
+.partners_page .reviews_block {
+  padding-top: 60px; }

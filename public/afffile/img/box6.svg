@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 241 73" style="enable-background:new 0 0 241 73;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.3;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:#6FBFF6;}
+	.st3{fill:#FFB29A;}
+	.st4{fill:#FFEFBB;}
+</style>
+<g class="st0">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-350.4093" y1="537.9813" x2="-349.9058" y2="537.9813" gradientTransform="matrix(1.475699e-14 73 241 -4.469961e-15 -129533 25598)">
+		<stop  offset="0" style="stop-color:#52E1F6"/>
+		<stop  offset="1" style="stop-color:#93F9D9"/>
+	</linearGradient>
+	<path class="st1" d="M204.5,73h-168C16.4,73,0,56.6,0,36.5S16.4,0,36.5,0h168C224.6,0,241,16.4,241,36.5S224.6,73,204.5,73z
+		 M36.5,1C16.9,1,1,16.9,1,36.5C1,56.1,16.9,72,36.5,72h168c19.6,0,35.5-15.9,35.5-35.5C240,16.9,224.1,1,204.5,1H36.5z"/>
+</g>
+<ellipse class="st2" cx="37.4" cy="36.5" rx="27.1" ry="27"/>
+<path class="st3" d="M26.1,36.4c0,0,1.1,1.7,3.5,3.1c0,0-1.7-14.9,9.5-17.5c-2.9,10.8,3.7,13.8,6,8.1c4,5.4,1,10.2,1,10.2
+	c1.6,0.2,3-1.6,3-1.6c0,0.2,0,0.5,0,0.7c0,6.6-5.2,12-11.7,12c-6.5,0-11.7-5.4-11.7-12C25.7,38.4,25.8,37.3,26.1,36.4z"/>
+<path class="st4" d="M32.3,46.2c0,2.9,2.3,5.3,5.1,5.3c2.8,0,5.1-2.4,5.1-5.3c0-1.6-0.7-2.9-1.7-3.9c-2,2.8-4.8-1.4-2.6-4.5
+	C38.2,37.8,32.3,38.5,32.3,46.2z"/>
+</svg>
