@@ -9,6 +9,11 @@ use DB;
 
 class Domains extends Model
 {
+
+    public function hotStreaks()
+    {
+        return $this->hasMany('App\Modules\Domains\Models\HotStreaks','domain_id','id');
+    }
     //
     public function purchases($id, $type = 'name')
     {

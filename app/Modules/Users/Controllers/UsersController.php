@@ -17,9 +17,9 @@ class UsersController extends \App\Modules\Panel\Controllers\AbstractController
      */
 
     protected $per_page = 20;
-    protected $offset   = 0;
+    protected $offset = 0;
     protected $pagination = false;
-    protected $total      = 0;
+    protected $total = 0;
 
     public function __construct()
     {
@@ -38,9 +38,13 @@ class UsersController extends \App\Modules\Panel\Controllers\AbstractController
         if (Auth::user()->role === 1) {
 
             $this->total = User::count();
-            $this->pagenation();
-     
-            $users = User::whereIN('role', [0,2])->orderBy('id', 'DESC')->offset($this->offset)->limit($this->per_page)->get();
+            $this->pagination();
+
+            $users = User::whereIN('role', [0, 2])
+                ->orderBy('id', 'DESC')
+                ->offset($this->offset)
+                ->limit($this->per_page)
+                ->get();
 
             return view('Users::index')->with(['domains' => $this->domains, 'users' => $users, 'pagination' => $this->pagination]);
 
@@ -65,19 +69,23 @@ class UsersController extends \App\Modules\Panel\Controllers\AbstractController
             }
             $user->save();
         }
- 
-        return redirect('/admin/users'); 
+
+        return redirect('/admin/users');
     }
 
-    protected function pagenation()
+    protected function pagination()
     {
         if ($this->total > $this->per_page) {
-            $pages      = $this->total / $this->per_page;
+            $pages = $this->total / $this->per_page;
             $current = (isset($_GET['page']) ? $_GET['page'] : 1);
             $this->pagination = ['total' => $pages, 'current' => $current];
-        } 
+        }
 
-        if(isset($_GET['page']) && intval($_GET['page']) && isset($pages)) { $this->offset = ($_GET['page'] - 1) * $this->per_page; } else { $this->offset = 0; }
+        if (isset($_GET['page']) && intval($_GET['page']) && isset($pages)) {
+            $this->offset = ($_GET['page'] - 1) * $this->per_page;
+        } else {
+            $this->offset = 0;
+        }
     }
 
     public function enterAsUser($id)
@@ -91,16 +99,16 @@ class UsersController extends \App\Modules\Panel\Controllers\AbstractController
 
         } else {
             return redirect('/admin');
-        } 
+        }
     }
 
     public function enterAsAdmin()
-    {   
+    {
         if (Session::has('admin_id')) {
             $user = User::find(Session::get('admin_id'));
             Auth::login($user);
         }
 
-        return redirect('/admin/users');   
+        return redirect('/admin/users');
     }
 }
