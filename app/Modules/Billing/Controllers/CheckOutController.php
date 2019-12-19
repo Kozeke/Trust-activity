@@ -67,7 +67,6 @@ class CheckOutController extends \App\Modules\Panel\Controllers\AbstractControll
         } else {
             $this->setTitle();
         }
- 
         Twocheckout::privateKey('603C0D1B-8A33-4B34-B401-1890BC911606'); //Private Key
         Twocheckout::sellerId('203805143'); // 2Checkout Account Number
         //Twocheckout::sandbox(true); // Set to false for production accounts.
@@ -90,7 +89,7 @@ class CheckOutController extends \App\Modules\Panel\Controllers\AbstractControll
                 )
             ));
 
-            if ($charge['response']['responseCode'] == 'APPROVED') {
+            if ($charge['response']['responseCode'] == 'APPROVED'||$charge['response']['responseCode'] =='PENDING') {
  				$this->successPayment();
             }
         } catch (Twocheckout_Error $e) {
@@ -117,8 +116,10 @@ class CheckOutController extends \App\Modules\Panel\Controllers\AbstractControll
 
     private function successPayment()
     {	
-        if ($this->payment_type == 'bonus-mini' && $this->payment_type == 'bonus-max' & $this->payment_type == 'custom') {
+        if ($this->payment_type == 'bonus-mini' || $this->payment_type == 'bonus-max' || $this->payment_type == 'custom') {
         //////
+            echo 'success';
+
             return $this->changeBalance();
         }  else if ($this->payment_type == 'campaign') {
         //////
