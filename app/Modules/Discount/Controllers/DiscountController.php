@@ -47,8 +47,6 @@ class DiscountController extends \App\Modules\Panel\Controllers\AbstractControll
             $value->created = \Carbon\Carbon::createFromTimeStamp(strtotime($value->created_at))->format('F d, Y'); 
         }
 
-        print_r($r_history);
-        die;
 
         return view('Discount::index')->with([
             'domains'   => $this->domains ,
