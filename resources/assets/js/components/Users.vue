@@ -42,7 +42,7 @@
                                 <p>registered: <span>{{ item.created_at }}</span></p>
                                 <p>balance: <span :id="'balance-' + item.id">${{ item.balance }} (${{ item.referral_balance}})</span></p>                                        
                                 <div class="domain-user-list">
-                                    <p v-for="domain in item.domains">{{ domain.url }} ({{ domain.count }})</p>
+                                    <p v-for="domain in item.domains">{{ domain.url }} ({{ domain.hot_streaks_count }})</p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                     if(a.search > b.search){return 1}
                     if(a.search < b.search){return -1}
                     return 0
-                })
+                });
 
                 if (total < this.users_list.length) {
                     this.users_list.reverse();
@@ -137,7 +137,7 @@
                 if (searching.trim() != '') {
                     for (index in this.users_list) {
                         //var email = this.users_list[index].email;
- 
+
                         if(this.users_list[index].email.indexOf(searching) !== -1) {
                             this.users_list[index].search = 1;
                             total++;

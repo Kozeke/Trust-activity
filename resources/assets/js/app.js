@@ -307,7 +307,7 @@ if(document.getElementById('jumpout-app') !== null) {
   });
 }
  
-Vue.component('users', require('./components/Users.vue'));
+Vue.component('users', require('./components/Users.vue').default);
 
 if(document.getElementById('admin_app') !== null) {
 
@@ -357,6 +357,7 @@ if(document.getElementById('admin_app') !== null) {
 
           let vm = this;
           $.post( '/api/users/list', data, function( result ) {
+              console.log(result)
             if (result != 'false') {
               for(index in result.list) {
                 result.list[index].status = 1;
@@ -430,8 +431,7 @@ if(document.getElementById('redactor') !== null) {
               id_name: 'jump_out_img'
             }
           ],
-          list2: [
-          ],
+          list2: [],
 
          },
          methods: {

@@ -166,6 +166,7 @@ class UsersController extends \App\Modules\Panel\Controllers\AbstractController
         if (Auth::user()->role === 1) {
 //            DB::enableQueryLog();
             $users = User::whereIN('role', [0, 2])
+//                ->whereId(3545)
                 ->orderBy('id', 'DESC')
                 ->with(['domains' => function ($q) {
                     $q->withCount('hotStreaks');
