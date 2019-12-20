@@ -20,6 +20,9 @@ class MainController extends Controller
 
 	public function index()
 	{
+	    if(env('APP_ENV') == 'local')
+	        return view('index');
+
 		$settings = AdminSettings::where('name', 'underConstruction')->first();
 		if ($settings->value == 1) {
     		return view('errors.500');	

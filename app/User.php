@@ -43,8 +43,7 @@ class User extends Authenticatable
             FROM    hot_streaks 
             WHERE   hot_streaks.domain_id = d.id
             ) as count")
-        )
-        ->get();
+        )->get();
 
         return $domains;
     }
@@ -52,6 +51,11 @@ class User extends Authenticatable
     public function discount() 
     {
         return $this->hasOne('App\Modules\Discount\Models\Discount');
+    }
+
+    public function domains()
+    {
+        return $this->hasMany('App\Modules\Domains\Models\Domains');
     }
 
     public function totalReferrals($id)
