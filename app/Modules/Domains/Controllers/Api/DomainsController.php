@@ -33,6 +33,8 @@ class DomainsController extends \App\Modules\Panel\Controllers\AbstractControlle
  
     public function postAdd(Request $request)
     {
+        $explode=explode('/',$request['url']);
+        $request['url']=$explode[0];
         $inputs              = $request->all();
         $inputs['url_valid'] = $this->preValidateURL($inputs['url']);
         $inputs['url']       = (trim($inputs['url']) != '' ? $this->preValidateURL($inputs['url']) : $inputs['url']);
