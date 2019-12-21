@@ -52,7 +52,7 @@
         </div>
 
         <transition-group name="fade" tag="div">
-            <div v-bind:key="index" class="notification_item" v-for="(campaign, index) in campaignList" v-bind:class="{ delete: campaign.deleted }">
+            <div v-bind:key="campaign.id" class="notification_item" v-for="(campaign, index) in campaignList" v-bind:class="{ delete: campaign.deleted }">
                 <div class="notification_toggle">
                     <div class="c-notification_toggle">
                         <input type="checkbox" v-model="campaign.status" :disabled="campaign.deleted === true" @click="checkStatus(campaign.id)">        
@@ -138,10 +138,6 @@
                     </div>
                 </div>             
             </div>
-
-
-
-
 
             <div v-bind:key="777" v-if="campaignList.length == 0 && purchase && campaignListShowPreloader == false" class="notification_disabled_fon">
                 <div class="c-notification_disabled_fon new_campaign">

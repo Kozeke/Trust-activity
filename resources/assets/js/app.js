@@ -15,18 +15,18 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
  
-Vue.component('jumpoutlist', require('./components/JumpoutList.vue'));
-Vue.component('jumpoutmetrics', require('./components/JumpoutMetrics.vue'));
-Vue.component('campaignlist', require('./components/CampaignList.vue'));
-Vue.component('campaignlistnew', require('./components/CampaignListNew.vue'));
-Vue.component('campaigncontacts', require('./components/CampaignContacts.vue'));
-Vue.component('campaignmetrics', require('./components/CampaignMetrics.vue'));
-Vue.component('adddomainpopup', require('./components/AddDomainPopup.vue'));
-Vue.component('billing', require('./components/Billing.vue'));
-Vue.component('cmsinstruction', require('./components/CmsInstruction.vue'));
-Vue.component('campaignpurchase', require('./components/CampaignPurchase.vue'));
-Vue.component('topuppurchase', require('./components/TopupPurchase.vue'));
-Vue.component('campaignsettings', require('./components/CampaignSettings.vue'));
+Vue.component('jumpoutlist', require('./components/JumpoutList.vue').default);
+Vue.component('jumpoutmetrics', require('./components/JumpoutMetrics.vue').default);
+Vue.component('campaignlist', require('./components/CampaignList.vue').default);
+Vue.component('campaignlistnew', require('./components/CampaignListNew.vue').default);
+Vue.component('campaigncontacts', require('./components/CampaignContacts.vue').default);
+Vue.component('campaignmetrics', require('./components/CampaignMetrics.vue').default);
+Vue.component('adddomainpopup', require('./components/AddDomainPopup.vue').default);
+Vue.component('billing', require('./components/Billing.vue').default);
+Vue.component('cmsinstruction', require('./components/CmsInstruction.vue').default);
+Vue.component('campaignpurchase', require('./components/CampaignPurchase.vue').default);
+Vue.component('topuppurchase', require('./components/TopupPurchase.vue').default);
+Vue.component('campaignsettings', require('./components/CampaignSettings.vue').default);
 
 var pathname = window.location.pathname;
 
@@ -373,7 +373,7 @@ if(document.getElementById('admin_app') !== null) {
   });
 }
  
-Vue.component('redactor', require('./components/Redactor.vue'));
+Vue.component('redactor', require('./components/Redactor.vue').default);
 
 if(document.getElementById('redactor') !== null) {
  
