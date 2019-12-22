@@ -13,15 +13,17 @@
 // seo redirect
 //Route::get('test', 'testController@test');
 
-Route::get('applying-social-proof-to-your-business', function(){
-	return redirect('/blog/conversion/applying-social-proof-to-your-business');
+Route::get('applying-social-proof-to-your-business', function () {
+    return redirect('/blog/conversion/applying-social-proof-to-your-business');
 });
 // seo redirect
-Route::get('4-website-markers-that-screams-trust-to-users', function(){
-	return redirect('/blog/conversion/4-website-markers-that-screams-trust-to-users');
+Route::get('4-website-markers-that-screams-trust-to-users', function () {
+    return redirect('/blog/conversion/4-website-markers-that-screams-trust-to-users');
 });
 
- 
+Route::get('sf', function () {
+    echo phpinfo();
+});
 /*Route::get('test', function(){
 	$users  = DB::table('users')->get();
 	$file   = '/var/www/html/public/email.txt';
@@ -43,15 +45,15 @@ Route::get('4-website-markers-that-screams-trust-to-users', function(){
 	$item->ParseNameFromApi();
  
 }); */
- 
 
-Route::get('api/get-script', function(){
-	if (isset($_GET['acc']) && strlen($_GET['acc']) > 0) {
-		//echo '<script type="text/javascript" src="https://www.trustactivity.com/cdn/truster.js?acc='.$_GET['acc'].'"></script>';
- 		return response()->json(['html' => '<script type="text/javascript" src="https://www.trustactivity.com/cdn/truster.js?acc='.$_GET['acc'].'"></script>']);
-	} else {
- 		return response()->json(['error' => 'wrong GET data']);
-	}
+
+Route::get('api/get-script', function () {
+    if (isset($_GET['acc']) && strlen($_GET['acc']) > 0) {
+        //echo '<script type="text/javascript" src="https://www.trustactivity.com/cdn/truster.js?acc='.$_GET['acc'].'"></script>';
+        return response()->json(['html' => '<script type="text/javascript" src="https://www.trustactivity.com/cdn/truster.js?acc=' . $_GET['acc'] . '"></script>']);
+    } else {
+        return response()->json(['error' => 'wrong GET data']);
+    }
 });
 
 //Route::get('/check-domains', '\App\Modules\IsInstalled\Controllers\IsInstalledController@index');
