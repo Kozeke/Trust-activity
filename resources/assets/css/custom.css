@@ -1685,7 +1685,7 @@ a.btn.search-submit:hover, a.btn.search-submit:active {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url(../img/2checkout.svg);
+    background-image: url(../img/visa_PNG39.png);
     margin: auto;
 }
 
@@ -1743,7 +1743,7 @@ a.btn.search-submit:hover, a.btn.search-submit:active {
     margin-left: 20%;
     height: 40px;
     border: none;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: white;
     box-shadow: 0 0 4px 0 rgba(0,0,0,.1);
     border: 1px solid transparent;
@@ -1845,7 +1845,7 @@ a.btn.search-submit:hover, a.btn.search-submit:active {
     width: 100px;
     height: 100%;
     margin: auto;
-    background-image: url(../img/2checkout.svg);
+    background-image: url(../img/visa_PNG39.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
