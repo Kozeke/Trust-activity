@@ -30,7 +30,7 @@ class AuthController extends AbstractAuthController
      */
 
     public function index()
-    {   
+    {
         return (User::isUserExist() == 0 ? view('Panel::auth.firstUser') : view('Panel::auth.login')->with('translate', $this->translate));
     }
 

@@ -85,7 +85,6 @@ class AbstractController extends Controller
 	}
 
 	public static function getTranslations($lang = null) {
-
 		//$mutable = \Carbon\Carbon::now();
 		//print_r($mutable);
 		//die;
