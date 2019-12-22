@@ -158,10 +158,10 @@
                         </div>
                         <h2>Enter your billing details</h2>
                         <div class="checkout-row">
-                            <input type="text" name="" id="checkout-name" placeholder="Enter name" />
+
                         </div>
-                        <div class="checkout-row">
-                            <select id="checkout-country">
+                        <div  class="checkout-row billing">
+                            <select  id="checkout-country">
                                 <option value="0">Please select...</option>
                                 <option value="240">Afghanistan</option>
                                 <option value="1">Albania</option>
@@ -407,13 +407,61 @@
                                 <option value="235">Zambia</option>
                                 <option value="236">Zimbabwe</option>
                             </select>
-                            <input type="text" name="" id="checkout-address" placeholder="Address" />
-                            <input type="text" name="" id="checkout-city" placeholder="City" />
-                            <input type="text" name="" id="checkout-state" placeholder="State" />
-                            <input type="text" name="" id="checkout-zip" placeholder="Zip code" class="short-input" />
+                            <div class="checkout-error" style="padding-left: 0px"  id="checkout-country-error" >
+                                <img
+                                        style="width: 16px;height: 16px; margin-top:-3%"
+                                        src="https://png.pngtree.com/svg/20170718/error_icon_509209.png"
+                                />
+                                <span
+                                        style="font-size: 15px;padding-top: 3px;margin-left: 1%;color:red"
+                                >Choose your address</span></div>
+                            <input  type="text" name="" id="checkout-address" placeholder="Address" />
+                            <div class="checkout-error" style="padding-left: 0px"  id="checkout-address-error" >
+                                <img
+                                        style="width: 16px;height: 16px; margin-top:-3%"
+                                        src="https://png.pngtree.com/svg/20170718/error_icon_509209.png"
+                                />
+                                <span
+                                        style="font-size: 15px;padding-top: 3px;margin-left: 1%;color:red"
+                                >Address can't be blank</span></div>
+                            <input  type="text" name="" id="checkout-city" placeholder="City" />
+                            <div class="checkout-error" style="padding-left: 0px"  id="checkout-city-error" >
+                                <img
+                                        style="width: 16px;height: 16px; margin-top:-3%"
+                                        src="https://png.pngtree.com/svg/20170718/error_icon_509209.png"
+                                />
+                                <span
+                                        style="font-size: 15px;padding-top: 3px;margin-left: 1%;color:red"
+                                >City can't be blank</span></div>
+                            <input  type="text" name="" id="checkout-state" placeholder="State" />
+                            <div class="checkout-error" style="padding-left: 0px"  id="checkout-state-error" >
+                                <img
+                                        style="width: 16px;height: 16px; margin-top:-3%"
+                                        src="https://png.pngtree.com/svg/20170718/error_icon_509209.png"
+                                />
+                                <span
+                                        style="font-size: 15px;padding-top: 3px;margin-left: 1%;color:red"
+                                >State can't be blank</span></div>
+                            <input class="short-input" type="text" name="" id="checkout-zip" placeholder="Zip code" />
+                            <div class="checkout-error" style="padding-left: 0px"  id="checkout-zip-error" >
+                                <img
+                                        style="width: 16px;height: 16px; margin-top:-3%"
+                                        src="https://png.pngtree.com/svg/20170718/error_icon_509209.png"
+                                />
+                                <span
+                                        style="font-size: 15px;padding-top: 3px;margin-left: 1%;color:red"
+                                >Zip can't be blank</span></div>
                         </div>
                         <div class="checkout-row">
-                            <input type="text" name="" id="checkout-phone" class="short-input" placeholder="Enter phone number" />
+                            <input class="short-input" type="text" name="" id="checkout-phone" placeholder="Enter phone number" />
+                            <div class="checkout-error" style="padding-left: 0px"  id="checkout-phone-error" >
+                                <img
+                                        style="width: 16px;height: 16px; margin-top:-3%"
+                                        src="https://png.pngtree.com/svg/20170718/error_icon_509209.png"
+                                />
+                                <span
+                                        style="font-size: 15px;padding-top: 3px;margin-left: 1%;color:red"
+                                >Phone number can't be blank</span></div>
                         </div>
                         <div class="checkout-card">
                             <div class="checkout-card-row full">
@@ -771,15 +819,15 @@
                 $('#cvv').removeClass('error');
  
                 var errors = 0;
- 
-                if ($('#checkout-name').val().length < 1) { $('#checkout-name').addClass('error'); errors++; } else { $('#checkout-name').removeClass('error'); }
-                if ($('#checkout-address').val().length < 1) { $('#checkout-address').addClass('error'); errors++; } else { $('#checkout-address').removeClass('error'); }
-                if ($('#checkout-city').val().length < 1) { $('#checkout-city').addClass('error'); errors++; } else { $('#checkout-city').removeClass('error'); }               
-                if ($('#checkout-state').val().length < 1) { $('#checkout-state').addClass('error'); errors++; } else { $('#checkout-state').removeClass('error'); }
-                if ($('#checkout-zip').val().length < 1) { $('#checkout-zip').addClass('error'); errors++; } else { $('#checkout-zip').removeClass('error'); }
-                if ($('#checkout-country option:selected').val() == 0) { $('#checkout-country').addClass('error'); errors++; } else { $('#checkout-country').removeClass('error'); }
-                if ($('#checkout-phone').val().length < 1) { $('#checkout-phone').addClass('error'); errors++; } else { $('#checkout-phone').removeClass('error'); }
-                
+
+                if ($('#checkout-address').val().length < 1) { $('#checkout-address').addClass('error'); errors++; $('#checkout-address-error').css('display','block')  } else { $('#checkout-address').removeClass('error');$('#checkout-address-error').css('display','none') }
+                if ($('#checkout-city').val().length < 1) { $('#checkout-city').addClass('error'); errors++; $('#checkout-city-error').css('display','block')  } else { $('#checkout-city').removeClass('error');$('#checkout-city-error').css('display','none') }
+                if ($('#checkout-state').val().length < 1) { $('#checkout-state').addClass('error'); errors++; $('#checkout-state-error').css('display','block') } else { $('#checkout-state').removeClass('error');$('#checkout-state-error').css('display','none') }
+                if ($('#checkout-zip').val().length < 1) { $('#checkout-zip').addClass('error'); errors++; $('#checkout-zip-error').css('display','block') } else { $('#checkout-zip').removeClass('error');$('#checkout-zip-error').css('display','none') }
+                if ($('#checkout-country option:selected').val() == 0) { $('#checkout-country').addClass('error'); errors++; $('#checkout-country-error').css('display','block')} else { $('#checkout-country').removeClass('error');$('#checkout-zip').removeClass('error');$('#checkout-country-error').css('display','none') }
+                if ($('#checkout-phone').val().length < 1) { $('#checkout-phone').addClass('error'); errors++; $('#checkout-phone-error').css('display','block')} else { $('#checkout-phone').removeClass('error');$('#checkout-phone-error').css('display','none')  }
+
+
                 if(errors == 0) {
                     var data = {    
                         'token' : data.response.token.token,
@@ -843,6 +891,12 @@
                         $('#expMonth').addClass('error');
                         $('#expYear').addClass('error');
                         $('#cvv').addClass('error');
+                        if ($('#checkout-address').val().length < 1) { $('#checkout-address').addClass('error'); $('#checkout-address').addClass('billing');  $('#checkout-address-error').css('display','block')  } else { $('#checkout-address').removeClass('error');$('#checkout-address-error').css('display','none') }
+                        if ($('#checkout-city').val().length < 1) { $('#checkout-city').addClass('error'); $('#checkout-city').addClass('billing');  $('#checkout-city-error').css('display','block')  } else { $('#checkout-city').removeClass('error');$('#checkout-city-error').css('display','none') }
+                        if ($('#checkout-state').val().length < 1) { $('#checkout-state').addClass('error'); $('#checkout-state').addClass('billing'); $('#checkout-state-error').css('display','block') } else { $('#checkout-state').removeClass('error');$('#checkout-state-error').css('display','none') }
+                        if ($('#checkout-zip').val().length < 1) { $('#checkout-zip').addClass('error');  $('#checkout-zip').addClass('billing');$('#checkout-zip-error').css('display','block') } else { $('#checkout-zip').removeClass('error');$('#checkout-zip-error').css('display','none') }
+                        if ($('#checkout-country option:selected').val() == 0) { $('#checkout-country').addClass('error'); $('#checkout-country').addClass('billing');  $('#checkout-country-error').css('display','block')} else { $('#checkout-country').removeClass('error');$('#checkout-country-error').css('display','none') }
+                        if ($('#checkout-phone').val().length < 1) { $('#checkout-phone').addClass('error');  $('#checkout-phone').addClass('billing'); $('#checkout-phone-error').css('display','block')} else { $('#checkout-phone').removeClass('error');$('#checkout-phone-error').css('display','none')  }
 
                         $('.dashboard_fixed_billing-preloader').fadeOut('fast');
                        // alert('Wrong card data');
@@ -864,6 +918,7 @@
                  $('#checkout-form .domain_modal_preloader').fadeIn('fast');
                 // Make the token request
                 TCO.requestToken(this.successCallback, this.errorCallback, args);
+                console.log(this.errorCallback);
             },
             SendPaymentCheckOut: function() {
  
@@ -933,3 +988,8 @@
         }
     }
 </script>
+<style>
+    .billing{
+        margin-bottom:0px !important;
+    }
+</style>
