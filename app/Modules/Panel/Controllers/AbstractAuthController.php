@@ -49,7 +49,7 @@ class AbstractAuthController extends Controller
             $position = Location::get($ip);
         }
  
-        if ($position !== false && ($position->countryCode == 'RU' || $position->countryCode == 'KZ')) {
+        if ($position !== false && ($position->countryCode == 'RU')) {
             
             $lang = strtolower($position->countryCode);
             $list = DB::table('languages as l')->where('l.name', strtolower($position->countryCode))
@@ -64,6 +64,7 @@ class AbstractAuthController extends Controller
             ->join('language_values as lv', 'lv.language_id', '=', 'l.id')
             ->select('lv.slug', 'lv.value')
             ->get();
+
         }
 
         $sorted_list         = [];
