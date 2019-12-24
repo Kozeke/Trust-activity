@@ -71,11 +71,10 @@
                 };
                 // posting data
                 $.post( '/api/domains/isInstalled', data, function( result ) {
-
                     if (result.status == true) {
                         $('.w-platform-loading').addClass('success');
                         setTimeout(function() {
-                            location.reload();
+                            document.location.href="/admin/domains/"+document.getElementById('domain_id').value;
                         }, 10000);
                     }
                 });
