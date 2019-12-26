@@ -48,7 +48,9 @@ class Domains extends Model
         return ($purchased ? $purchased->status: null);
 
     }
-
+    public function module_purchases(){
+        return $this->hasMany('App\Modules\Billing\Models\ModulePurchase','domain_id');
+    }
     public function getActivePurchase($id)
     {
         $purchased = DB::table('module_purchases')
