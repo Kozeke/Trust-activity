@@ -35,7 +35,6 @@ class AbstractController extends Controller
 					return redirect('/');
 				}	    		
 	    	}
-
 	        return $next($request);
 	    });
 	}

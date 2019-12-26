@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class PanelController extends AbstractController
 {
+    use StatisticTrait;
     /**
      * Create a new controller instance.
      *
@@ -29,8 +30,10 @@ class PanelController extends AbstractController
     public function index()
     { 
         if (Auth::user()->role === 1) {
-
-            return view('Panel::admin_index')->with(['domains' => $this->domains]);
+            return view('Panel::admin_index')->with([
+                'domains' => $this->domains,
+                'statistic' => $this->getStatistic()
+            ]);
         } else {
 
             if (count($this->domains) > 0) {
