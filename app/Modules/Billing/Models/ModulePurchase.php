@@ -14,7 +14,9 @@ class ModulePurchase extends Model
         $plan = ModulePlan::where('id', $id)->first();
         return ($plan ? $plan : 'none');
     }
-
+    public function module_plan(){
+        return $this->belongsTo('App\Modules\Billing\Models\ModulePlan');
+    }
     static public function byUserId($id) 
     {
 		//$rows = DB::table('domains as d')\
