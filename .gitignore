@@ -16,4 +16,4 @@ yarn-error.log
 .env
 /public/users
 /package-lock.json
-/composer.lock
+composer.lock

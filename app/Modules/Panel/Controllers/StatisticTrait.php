@@ -10,7 +10,7 @@ use App\Modules\Panel\Models\User;
 
 trait StatisticTrait
 {
-    public function getStatistic()
+    public function activeNotifiactionUsers()
     {
         $activeDomainIds = ModulePurchase::where([
             'status' => 1

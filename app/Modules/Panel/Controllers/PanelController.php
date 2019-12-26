@@ -1,5 +1,6 @@
 <?php namespace App\Modules\Panel\Controllers;
 
+use App\Modules\Panel\Models\User;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Modules\Domains\Models\Domains;
@@ -30,9 +31,12 @@ class PanelController extends AbstractController
     public function index()
     { 
         if (Auth::user()->role === 1) {
+
             return view('Panel::admin_index')->with([
                 'domains' => $this->domains,
-                'statistic' => $this->getStatistic()
+                'activeNotif' => $this->activeNotifiactionUsers(),
+                'trialUsersCount' => User::whereTrial(1)->count(),
+                'allUsersCount' => User::count()
             ]);
         } else {
 
