@@ -13,8 +13,8 @@
 				<div class="col-lg-offset-2 col-lg-8">
 					<div class="guide_title">
 						<h3>Количество пользователей с активным модулем notifications <b>{{$activeNotif->count()}}</b></h3>
-						<h4>На триале пользователей {{$trialUsersCount}}</h4>
-						<h4>Общее количество пользователей {{$allUsersCount}}</h4>
+						<h4>На триале пользователей {{$activeTrialUsers->count()}}</h4>
+						<h4>Общее количество пользователей {{$activeTrialUsers}}</h4>
 					</div>
 				</div>
 			</div>

@@ -32,10 +32,11 @@ class PanelController extends AbstractController
     { 
         if (Auth::user()->role === 1) {
 
+            $activeTrialUsers = User::whereTrial(1)->where('created_at', '>=', '2019-12-15')->count();
             return view('Panel::admin_index')->with([
                 'domains' => $this->domains,
                 'activeNotif' => $this->activeNotifiactionUsers(),
-                'trialUsersCount' => User::whereTrial(1)->count(),
+                'activeTrialUsers' => $activeTrialUsers,
                 'allUsersCount' => User::count()
             ]);
         } else {
