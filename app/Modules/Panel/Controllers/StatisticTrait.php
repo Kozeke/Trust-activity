@@ -27,7 +27,7 @@ trait StatisticTrait
 
     public function activeTrials()
     {
-        $currentDate = Carbon::now()->format('Y-m-d');
+        $currentDate = Carbon::now()->previousWeekday()->format('Y-m-d');
         $activeTrialUsers = User::whereTrial(1)->where('created_at', '>=', $currentDate)->count();
         return $activeTrialUsers;
     }
