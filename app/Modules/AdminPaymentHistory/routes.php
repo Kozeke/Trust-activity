@@ -14,8 +14,9 @@
 
 
 Route::group(['namespace' => 'App\Modules\AdminPaymentHistory\Controllers', 'middleware' => ['web']], function () {
- 
-	Route::resources([
+    Route::get('/api/payment_history', 'AdminPaymentHistoryController@getHistory');
+
+    Route::resources([
 	    'admin/payment-history' => 'AdminPaymentHistoryController'
 	]);
 });

@@ -64,7 +64,7 @@
                 </a>
             </div>
         </div>
-        <div class="admin_main" >
+        <div class="admin_main" id="payment_history">
             @yield('content')    
         </div>
         <script src="/js/app.js" type="text/javascript"></script>

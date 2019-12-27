@@ -37,28 +37,35 @@ class AdminPaymentHistoryController extends \App\Modules\Panel\Controllers\Abstr
     public function index()
     {
         if (Auth::user()->role === 1) {
-
+            return view('AdminPaymentHistory::index');
+        } else {
+            return redirect('/admin');
+        }
+    }
+        protected function getHistory(Request $request)
+    {
+        if (Auth::user()->role === 1) {
             //$this->invoices  =  Payments::whereIn('status', ['success', 'failed'])->get();
             //$this->purchases =  ModulePurchase::byUserId(Auth::user()->id);
             $data = [];
 
-            $search = (isset($_GET['search']) ? $_GET['search'] : '');
-            $status = (isset($_GET['status']) ? $_GET['status'] : ''); 
-            $start  = (isset($_GET['start']) ? $_GET['start'] : ''); 
-            $end    = (isset($_GET['end']) ? $_GET['end'] : ''); 
-
-            $page_per  = 10;
-            $page_curr = (isset($_GET['page']) ? $_GET['page'] : 1); 
+            $search = $request['search'];
+            $start = $request['start'];
+            $end = $request['end'];
+            $method = $request['method'];
+            $status = $request['status'];
 
 
-//            if ($search != '') {
-//                $users = User::where('email', 'LIKE', '%'.$search.'%')->whereIN('role', [0,2])->orderBy('id', 'DESC')->get();
-//            } else {
-//                $users = User::whereIN('role', [0,2])->orderBy('id', 'DESC')->get();;
-//            }
             $users = User::whereIN('role', [0, 2])->with(['payments', 'domains.module_purchases.module_plan.module'])->whereHas('payments', function ($query) {
                 $query->whereIn('status', ['success', 'failed']);
             })->filter(Input::all())->orderBy('id', 'DESC')->paginate(15);
+
+            $current_page=$users->currentPage();
+            $last_page=$users->lastPage();
+            $previous_page_url=$users->previousPageUrl();
+            $next_page_url=$users->nextPageUrl();
+
+
             foreach ($users as $key => $value) {
                 $history = $value->SortingUsers($value);
                 foreach ($history as $key2 => $value2) {
@@ -120,10 +127,9 @@ class AdminPaymentHistoryController extends \App\Modules\Panel\Controllers\Abstr
             }
  
             usort($data, array('App\Modules\AdminPaymentHistory\Controllers\AdminPaymentHistoryController','sortFunction'));
- 
-            return view('AdminPaymentHistory::index')->with([
-                'list' => $data
-            ]);   
+
+            return ['data'=>$data,'current_page'=>$current_page,'last_page'=>$last_page,'next_page_url'=>$next_page_url,'previous_page_url'=>$previous_page_url];
+
 
         } else {
             return redirect('/admin');

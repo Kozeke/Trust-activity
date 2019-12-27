@@ -27,10 +27,25 @@ Vue.component('cmsinstruction', require('./components/CmsInstruction.vue').defau
 Vue.component('campaignpurchase', require('./components/CampaignPurchase.vue').default);
 Vue.component('topuppurchase', require('./components/TopupPurchase.vue').default);
 Vue.component('campaignsettings', require('./components/CampaignSettings.vue').default);
+Vue.component('history_payment', require('./components/HistoryPayment').default);
 
+// import router from './router';
 var pathname = window.location.pathname;
+if(document.getElementById('payment_history') !== null) {
 
-//if(pathname != '/admin/domains' && document.getElementById('app') !== null) {
+    const app = new Vue({
+        el: '#payment_history',
+        /**
+         * The application's data.
+         */
+
+        data: {
+        },
+        methods: {
+
+        }});
+}
+// if(pathname != '/admin/domains' && document.getElementById('app') !== null) {
 if(document.getElementById('app') !== null) {
 
   const app = new Vue({
