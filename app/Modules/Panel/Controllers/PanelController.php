@@ -1,6 +1,7 @@
 <?php namespace App\Modules\Panel\Controllers;
 
 use App\Modules\Panel\Models\User;
+use Carbon\Carbon;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Input;
 use App\Modules\Domains\Models\Domains;
@@ -32,11 +33,10 @@ class PanelController extends AbstractController
     { 
         if (Auth::user()->role === 1) {
 
-            $activeTrialUsers = User::whereTrial(1)->where('created_at', '>=', '2019-12-15')->count();
             return view('Panel::admin_index')->with([
                 'domains' => $this->domains,
                 'activeNotif' => $this->activeNotifiactionUsers(),
-                'activeTrialUsers' => $activeTrialUsers,
+                'activeTrialUsers' => $this->activeTrials(),
                 'allUsersCount' => User::count()
             ]);
         } else {
