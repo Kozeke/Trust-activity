@@ -51,14 +51,16 @@ class AdminPaymentHistoryController extends \App\Modules\Panel\Controllers\Abstr
             $page_curr = (isset($_GET['page']) ? $_GET['page'] : 1); 
 
 
-            if ($search != '') {
-                $users = User::where('email', 'LIKE', '%'.$search.'%')->whereIN('role', [0,2])->orderBy('id', 'DESC')->get();
-            } else {
-                $users = User::whereIN('role', [0,2])->orderBy('id', 'DESC')->get();;
-            }
-
+//            if ($search != '') {
+//                $users = User::where('email', 'LIKE', '%'.$search.'%')->whereIN('role', [0,2])->orderBy('id', 'DESC')->get();
+//            } else {
+//                $users = User::whereIN('role', [0,2])->orderBy('id', 'DESC')->get();;
+//            }
+            $users = User::whereIN('role', [0, 2])->with(['payments', 'domains.module_purchases.module_plan.module'])->whereHas('payments', function ($query) {
+                $query->whereIn('status', ['success', 'failed']);
+            })->filter(Input::all())->orderBy('id', 'DESC')->paginate(15);
             foreach ($users as $key => $value) {
-                $history = $value->getPaymentHistory($value->id);
+                $history = $value->SortingUsers($value);
                 foreach ($history as $key2 => $value2) {
 
                     $isStatus = false;

@@ -57,16 +57,58 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Modules\Domains\Models\Domains');
     }
+    public function scopeFilter($query,$filters)
+    {
+        if (isset($filters['search_text'])) {
+            $search_text = $filters['search_text'];
+            $query->where('email','LIKE', '%' . $search_text . '%');
+        }
+//        dd($filters['status']);
+        if(isset($filters['status'])) {
+            $status = $filters['status'];
+            $query->whereHas('payments', function ($q) use ($status) {
+                $q->where('status', $status);
+            });
+        }
+        return $query;
+    }
+    public function sortingUsers($user)
+    {
+        $purchases=[];
+        foreach ($user->domains as $key => $domain) {
+            if (isset($domain->module_purchases)) {
+                foreach ($domain->module_purchases as $key1 => $purchase) {
 
+                    if(isset($purchase->module_plan)){
+                        $purchase->module_plan_name=$purchase->module_plan->name;
+                        $purchase->module_plan_price=$purchase->module_plan->price_mo;
+                        $purchase->module_name=$purchase->module_plan->module->name;
+//                        dd($purchase);
+
+                    }
+                    array_push($purchases,$purchase);
+                }
+            }
+
+        }
+        $this->purchases = $purchases;
+        $this->invoices = $user->payments;
+
+        $result=$this->getPaymentHistory($user->id);
+        return $result;
+    }
     public function totalReferrals($id)
     {
         return DB::table('users')->where('referral_id', $id)->count();
     }
-
+    public function payments()
+    {
+        return $this->hasMany('App\Payments');
+    }
     public function getPaymentHistory($id)
     {
-        $this->invoices  =  Payments::where('user_id', $id)->whereIn('status', ['success', 'failed'])->get();
-        $this->purchases =  ModulePurchase::byUserId($id);
+//        $this->invoices  =  Payments::where('user_id', $id)->whereIn('status', ['success', 'failed'])->get();
+//        $this->purchases =  ModulePurchase::byUserId($id);
 
         $list = $this->MergePaymentPurchase();
         return $list;
