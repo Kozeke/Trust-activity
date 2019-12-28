@@ -72,7 +72,7 @@ class AdminPaymentHistoryController extends \App\Modules\Panel\Controllers\Abstr
 
                     $isStatus = false;
                     $inDate   = false;
- 
+                    $isMethod = false;
                     // если пустота то проходит
                     // если не пустота и ровняется статусу то проходит
                     if ($status == '') {
@@ -80,6 +80,12 @@ class AdminPaymentHistoryController extends \App\Modules\Panel\Controllers\Abstr
                     } else if ($status == $value2->status) {
                         $isStatus = true;      
                     }
+                    if ($method == '') {
+                        $isMethod  = true;
+                    } else if ($method == $value2->method) {
+                        $isMethod  = true;
+                    }
+
 
                     if ($start == '' && $end == '') {
                         $inDate = true;
@@ -103,7 +109,7 @@ class AdminPaymentHistoryController extends \App\Modules\Panel\Controllers\Abstr
                         }
                     }
  
-                    if ($isStatus && $inDate) {
+                    if ($isStatus && $inDate &&$isMethod) {
 
                         $item = [
                             'method'      => $value2->method,
